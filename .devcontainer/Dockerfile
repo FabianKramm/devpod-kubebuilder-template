@@ -17,3 +17,6 @@ RUN curl -L -o kubebuilder "https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$
 
 # Install bash-complete to make kubectl autocomplete work
 RUN apt-get update && apt-get install bash-completion -y && rm -rf /var/lib/apt/lists/*
+
+# Show vars
+RUN printenv
